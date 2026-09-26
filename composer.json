@@ -1,0 +1,22 @@
+{
+    "name": "sandstorm/mcp-feature-set-media",
+    "type": "neos-package",
+    "description": "MCP FeatureSet for content migrations into Neos 9: list and import assets from a server folder, set asset properties on nodes and soft remove whitelisted migrated nodes",
+    "license": "AGPL-3.0-or-later",
+    "require": {
+        "neos/neos": "^9.0",
+        "sjs/flow-mcp": "*",
+        "sjs/neos-mcp": "*",
+        "sjs/neos-mcp-feature-set-resources": "*"
+    },
+    "autoload": {
+        "psr-4": {
+            "Sandstorm\\MCP\\FeatureSet\\Media\\": "Classes/"
+        }
+    },
+    "extra": {
+        "neos": {
+            "package-key": "Sandstorm.MCP.FeatureSet.Media"
+        }
+    }
+}

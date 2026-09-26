@@ -1,0 +1,26 @@
+SJS:
+  Flow:
+    MCP:
+      server:
+        mcp:
+          featureSets:
+            media_import: \Sandstorm\MCP\FeatureSet\Media\MediaImportFeatureSet
+
+Sandstorm:
+  MCP:
+    FeatureSet:
+      Media:
+        # Folder the list_images / import_image tools read importable files from.
+        resourceFolder: '%FLOW_PATH_DATA%Persistent/McpResources/'
+
+        # Whitelist for the soft_remove_migrated_node MCP tool. A node may ONLY be removed
+        # if it is of one of these NodeTypes (isOfType, so supertypes match subtypes) AND
+        # has the matching ancestorAggregateId somewhere up its parent chain. Anything else
+        # is refused. Empty by default: configure the entries in your site package, e.g.
+        #
+        #   removableNodes:
+        #     - nodeType: 'Vendor.Site:Document.News.Post'
+        #       ancestorAggregateId: '<aggregate id of the news parent document>'
+        #     - nodeType: 'Neos.Neos:Content'
+        #       ancestorAggregateId: '<aggregate id of the news parent document>'
+        removableNodes: []
