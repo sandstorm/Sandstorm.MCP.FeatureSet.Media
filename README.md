@@ -28,6 +28,11 @@ argument of `import_image` for sha1-named files without an extension.
 
 ## Installation
 
+For setting up the whole toolset in a Neos project (sjs base packages, both Sandstorm feature sets,
+database migration, connection token, MCP client), follow the
+[full setup guide in Sandstorm.MCP.FeatureSet.Content](https://github.com/sandstorm/Sandstorm.MCP.FeatureSet.Content#setting-up-the-full-mcp-toolset-in-a-neos-project).
+The minimum for this package alone:
+
 The package is not on Packagist. Add the VCS repositories to your **root** `composer.json`:
 
 ```json
